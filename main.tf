@@ -17,7 +17,3 @@ resource "azurerm_resource_group" "github_rg" {
   name     = "github-action-rg"
   location = "East US"
 }
-resource "azurerm_resource_group" "github_rg-1" {
-  name     = "github-action-rg-1"
-  location = "East US"
-}
