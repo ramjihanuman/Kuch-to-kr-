@@ -10,7 +10,8 @@ terraform {
 
 provider "azurerm" {
   features {}
-  
+    # DO NOT use Azure CLI auth in GitHub Actions
+  use_cli = false
 }
 
 
