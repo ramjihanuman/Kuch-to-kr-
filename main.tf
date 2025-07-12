@@ -1,4 +1,3 @@
-
 terraform {
   required_providers {
     azurerm = {
@@ -6,26 +5,15 @@ terraform {
       version = "~> 3.0"
     }
   }
+
+  required_version = ">= 1.3.0"
 }
 
 provider "azurerm" {
   features {}
-    # DO NOT use Azure CLI auth in GitHub Actions
-  use_cli = false
 }
 
-
-resource "azurerm_resource_group" "rg_todo" {
-    name     = "Jitu"
-    location = "East Us"
-}
-
-resource "azurerm_resource_group" "rg_todo-1" {
-    name     = "Jitu-1"
-    location = "East Us"
-}
-
-resource "azurerm_resource_group" "rg_todo-2" {
-    name     = "Jitu-2"
-    location = "East Us"
+resource "azurerm_resource_group" "github_rg" {
+  name     = "github-action-rg"
+  location = "East US"
 }
